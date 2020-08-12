@@ -4,13 +4,13 @@ require('dotenv').config();
 const username = process.env.twitter_username;
 const password = process.env.twitter_password;
 
-let browser = null;
-let page = null;
+// let browser = null;
+// let page = null;
 
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
-    executablePath: '/usr/bin/chromium-browser',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
   const page = await browser.newPage();
