@@ -10,7 +10,7 @@ let page = null;
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
-    ignoreDefaultArgs: ['--disable-extensions'],
+    executablePath: '/usr/bin/chromium-browser',
   });
 
   const page = await browser.newPage();
