@@ -8,7 +8,7 @@ let browser = null;
 let page = null;
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: false });
 
   const page = await browser.newPage();
   page.setViewport({ width: 1280, height: 800, isMobile: false });
@@ -38,7 +38,7 @@ let page = null;
   let authorsSet = new Set();
   try {
     let previousHeight;
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 20; i++) {
       const elementHandles = await page.$$(
         'a.css-4rbku5.css-18t94o4.css-1dbjc4n.r-sdzlij.r-1loqt21.r-1adg3ll.r-ahm1il.r-1udh08x.r-o7ynqc.r-6416eg.r-13qz1uu'
       );
