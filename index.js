@@ -10,9 +10,6 @@ let page = null;
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
-    args: ['--no-sandbox'],
-  });
-  const browser = await puppeteer.launch({
     ignoreDefaultArgs: ['--disable-extensions'],
   });
 
