@@ -12,6 +12,9 @@ let page = null;
     headless: false,
     args: ['--no-sandbox'],
   });
+  const browser = await puppeteer.launch({
+    ignoreDefaultArgs: ['--disable-extensions'],
+  });
 
   const page = await browser.newPage();
   page.setViewport({ width: 1280, height: 800, isMobile: false });
