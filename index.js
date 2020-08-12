@@ -8,7 +8,10 @@ let browser = null;
 let page = null;
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+    headless: false,
+    args: ['--no-sandbox'],
+  });
 
   const page = await browser.newPage();
   page.setViewport({ width: 1280, height: 800, isMobile: false });
