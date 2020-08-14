@@ -10,7 +10,7 @@ const password = process.env.twitter_password;
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: ['--no-sandbox'],
   });
 
   const page = await browser.newPage();
