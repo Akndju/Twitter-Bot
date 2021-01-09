@@ -30,7 +30,7 @@ const password = process.env.twitter_password;
   await page.waitFor('input[data-testid="SearchBox_Search_Input"]');
   await page.type(
     'input[data-testid="SearchBox_Search_Input"]',
-    '#bbnaija2020lockdown',
+    'ajibade babalade',
     {
       delay: 150,
     }
@@ -41,7 +41,7 @@ const password = process.env.twitter_password;
   let authorsSet = new Set();
   try {
     let previousHeight;
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       const elementHandles = await page.$$(
         'a.css-4rbku5.css-18t94o4.css-1dbjc4n.r-sdzlij.r-1loqt21.r-1adg3ll.r-ahm1il.r-1udh08x.r-o7ynqc.r-6416eg.r-13qz1uu'
       );
@@ -59,7 +59,7 @@ const password = process.env.twitter_password;
       await page.waitForFunction(
         `document.body.scrollHeight > ${previousHeight}`
       );
-      await page.waitFor(3000);
+      await page.waitFor(3001);
     }
   } catch (e) {
     console.log(e);
@@ -78,7 +78,7 @@ const password = process.env.twitter_password;
       await page.click(
         'div[class="css-18t94o4 css-1dbjc4n r-1niwhzg r-p1n3y5 r-sdzlij r-1phboty r-rs99b7 r-1w2pmg r-1vuscfd r-1dhvaqw r-1ny4l3l r-1fneopy r-o7ynqc r-6416eg r-lrvibr"]'
       );
-      await page.waitFor(15 * 60 * 1000);
+      await page.waitFor(5000);
       await page.goBack();
     } catch (error) {
       console.error(error);
