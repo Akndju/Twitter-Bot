@@ -30,7 +30,7 @@ const password = process.env.twitter_password;
   await page.waitFor('input[data-testid="SearchBox_Search_Input"]');
   await page.type(
     'input[data-testid="SearchBox_Search_Input"]',
-    'ajibade babalade',
+    'Abstract Art',
     {
       delay: 150,
     }
@@ -61,8 +61,8 @@ const password = process.env.twitter_password;
       );
       await page.waitFor(3001);
     }
-  } catch (e) {
-    console.log(e);
+  } catch (error) {
+    console.log(error);
   }
 
   console.log(authorsSet);
